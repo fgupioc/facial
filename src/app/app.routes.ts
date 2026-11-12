@@ -1,3 +1,9 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { CapturePage } from './capture-page/capture-page';
+
+export const routes: Routes = [
+  { path: 's/:sessionId', component: CapturePage },
+  { path: '', component: CapturePage }, // modo desarrollo, sin sesión
+  { path: '**', redirectTo: '' },
+];
